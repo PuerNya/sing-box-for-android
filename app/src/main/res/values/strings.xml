@@ -12,6 +12,7 @@
     <string name="title_edit_configuration">Edit Configuration</string>
     <string name="title_overview">Overview</string>
     <string name="title_groups">Groups</string>
+    <string name="title_providers">Providers</string>
 
     <string name="quick_toggle">Toggle</string>
     <string name="profile_name">Name</string>

@@ -7,6 +7,8 @@ import io.nekohasekai.libbox.CommandClientOptions
 import io.nekohasekai.libbox.Libbox
 import io.nekohasekai.libbox.OutboundGroup
 import io.nekohasekai.libbox.OutboundGroupIterator
+import io.nekohasekai.libbox.OutboundProvider
+import io.nekohasekai.libbox.OutboundProviderIterator
 import io.nekohasekai.libbox.StatusMessage
 import io.nekohasekai.libbox.StringIterator
 import io.nekohasekai.sfa.ktx.toList
@@ -23,7 +25,7 @@ open class CommandClient(
 ) {
 
     enum class ConnectionType {
-        Status, Groups, Log, ClashMode
+        Status, Groups, Providers, Log, ClashMode
     }
 
     interface Handler {
@@ -32,6 +34,7 @@ open class CommandClient(
         fun onDisconnected() {}
         fun updateStatus(status: StatusMessage) {}
         fun updateGroups(groups: List<OutboundGroup>) {}
+        fun updateProviders(providers: List<OutboundProvider>) {}
         fun clearLog() {}
         fun appendLog(message: String) {}
         fun initializeClashMode(modeList: List<String>, currentMode: String) {}
@@ -48,6 +51,7 @@ open class CommandClient(
         options.command = when (connectionType) {
             ConnectionType.Status -> Libbox.CommandStatus
             ConnectionType.Groups -> Libbox.CommandGroup
+            ConnectionType.Providers -> Libbox.CommandProvider
             ConnectionType.Log -> Libbox.CommandLog
             ConnectionType.ClashMode -> Libbox.CommandClashMode
         }
@@ -105,6 +109,17 @@ open class CommandClient(
                 groups.add(message.next())
             }
             handler.updateGroups(groups)
+        }
+
+        override fun writeProviders(message: OutboundProviderIterator?) {
+            if (message == null) {
+                return
+            }
+            val providers = mutableListOf<OutboundProvider>()
+            while (message.hasNext()) {
+                providers.add(message.next())
+            }
+            handler.updateProviders(providers)
         }
 
         override fun clearLog() {

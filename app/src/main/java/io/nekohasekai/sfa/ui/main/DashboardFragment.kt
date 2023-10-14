@@ -15,6 +15,7 @@ import io.nekohasekai.sfa.constant.Status
 import io.nekohasekai.sfa.databinding.FragmentDashboardBinding
 import io.nekohasekai.sfa.ui.MainActivity
 import io.nekohasekai.sfa.ui.dashboard.GroupsFragment
+import io.nekohasekai.sfa.ui.dashboard.ProvidersFragment
 import io.nekohasekai.sfa.ui.dashboard.OverviewFragment
 
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
@@ -99,7 +100,8 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     enum class Page(@StringRes val titleRes: Int, val fragmentClass: Class<out Fragment>) {
         Overview(R.string.title_overview, OverviewFragment::class.java),
-        Groups(R.string.title_groups, GroupsFragment::class.java);
+        Groups(R.string.title_groups, GroupsFragment::class.java),
+        Providers(R.string.title_providers, ProvidersFragment::class.java);
     }
 
     class Adapter(parent: Fragment) : FragmentStateAdapter(parent) {
