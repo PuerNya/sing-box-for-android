@@ -30,7 +30,6 @@ android {
             storeFile file("release.keystore")
             storePassword getProps("KEYSTORE_PASS")
             keyAlias getProps("ALIAS_NAME")
-            keyPassword getProps("ALIAS_PASS")
         }
     }
 
@@ -42,6 +41,7 @@ android {
             buildConfigField("String", "APPCENTER_SECRET", "\"" + getProps("APPCENTER_SECRET") + "\"")
         }
         release {
+            shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
