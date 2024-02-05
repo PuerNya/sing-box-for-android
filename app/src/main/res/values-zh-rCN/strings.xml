@@ -1,3 +1,151 @@
 <resources>
+    <string name="app_name">sing-box</string>
+
+    <string name="stop">停</string>
     <string name="ok">好</string>
+    <string name="no_thanks">不了</string>
+
+    <string name="title_dashboard">仪表盘</string>
+    <string name="title_configuration">配置文件</string>
+    <string name="title_log">日志</string>
+    <string name="title_settings">设置</string>
+    <string name="title_new_profile">新增配置</string>
+    <string name="title_edit_profile">修改配置</string>
+    <string name="title_edit_configuration">修改配置项</string>
+    <string name="title_overview">覆写</string>
+    <string name="title_groups">节点组</string>
+    <string name="title_debug">调试</string>
+
+    <string name="quick_toggle">切换配置</string>
+    <string name="profile_name">配置名称</string>
+    <string name="profile_type">配置类型</string>
+    <string name="profile_source">配置来源</string>
+    <string name="profile_url">订阅地址</string>
+    <string name="profile_import_file">导入本地文件</string>
+    <string name="profile_create">新建配置</string>
+    <string name="profile_edit_content">修改内容</string>
+    <string name="profile_check">检查配置</string>
+    <string name="profile_share">分享配置</string>
+    <string name="profile_share_url">以二维码分享配置</string>
+    <string name="profile_input_required">请求</string>
+    <string name="profile_empty">没有配置</string>
+    <string name="profile_item_last_updated">上次更新：%s</string>
+    <string name="profile_last_updated">上次更新时间</string>
+    <string name="profile_update">更新订阅</string>
+    <string name="profile_auto_update">自动更新</string>
+    <string name="profile_auto_update_interval">自动更新间隔（单位：分钟）</string>
+    <string name="profile_auto_update_interval_minimum_hint">自动更新间隔不得小于 15</string>
+
+    <string name="profile_type_local">本地文件</string>
+    <string name="profile_type_remote">远程订阅</string>
+    <string name="profile_source_create_new">新增</string>
+    <string name="profile_source_import">导入</string>
+
+    <string name="menu_undo">撤销</string>
+    <string name="menu_redo">重做</string>
+    <string name="menu_format">格式化</string>
+    <string name="menu_delete">删除</string>
+    <string name="menu_share">分享</string>
+
+    <string name="status_default">服务已停止</string>
+    <string name="status_starting">服务正在启动…</string>
+    <string name="status_stopping">服务正在停止…</string>
+    <string name="status_started">服务已启动</string>
+
+    <string name="enabled">启用</string>
+    <string name="disabled">禁用</string>
+
+    <string name="settings_clear_working_directory">清理工作目录</string>
+
+    <string name="error_title">错误</string>
+    <string name="file_manager_missing">您的设备缺少标准 Android 文件选择器，请安装具有该功能的应用（如：质感文件）后重试。</string>
+    <string name="loading">加载中…</string>
+
+    <string name="service_error_missing_permission">申请启动 VPN 服务权限失败</string>
+    <string name="service_error_missing_notification_permission">申请通知发送权限失败</string>
+    <string name="service_error_empty_configuration">配置为空</string>
+    <string name="service_error_title_start_command_server">启动命令行服务</string>
+    <string name="service_error_title_create_service">创建服务</string>
+    <string name="service_error_title_start_service">启动服务</string>
+
+    <string name="status_status">状态</string>
+    <string name="status_memory">内存用量</string>
+    <string name="status_goroutines">协程数</string>
+    <string name="status_connections">连接数</string>
+    <string name="status_connections_inbound">入站连接数</string>
+    <string name="status_connections_outbound">出站连接数</string>
+    <string name="status_uplink">上行</string>
+    <string name="status_downlink">下行</string>
+    <string name="status_traffic">实时流量</string>
+    <string name="status_traffic_total">流量总计</string>
+
+    <string name="profile">配置</string>
+    <string name="core_version">核心版本</string>
+    <string name="core">核心设置</string>
+    <string name="dynamic_notification">在通知中显示实时速度</string>
+    <string name="core_data_size">存储空间使用量</string>
+    <string name="check_update_automatic">自动检查更新</string>
+    <string name="check_update">检查更新</string>
+    <string name="title_app_settings">应用设置</string>
+    <string name="memory_limit">内存限制</string>
+    <string name="background_permission">后台运行权限</string>
+    <string name="background_permission_description">请求该权限以确保 VPN 服务正常工作\n\n如果你的设备使用的是大陆 OEM 提供的 ROM，在获取权限后此卡片可能不会消失</string>
+    <string name="read_more">了解更多</string>
+    <string name="request_background_permission">忽略电池优化</string>
+    <string name="import_remote_profile">导入远程订阅</string>
+    <string name="import_remote_profile_message">是否导入远程订阅 %s ？你将连接到 %s 以下载配置</string>
+
+    <string name="title_profile_override">覆写配置</string>
+    <string name="profile_override_description">覆写平台特定配置</string>
+    <string name="profile_override_configure">编辑</string>
+    <string name="title_per_app_proxy">编辑代理名单</string>
+    <string name="per_app_proxy_description">覆写配置中的代理黑/白名单</string>
+    <string name="per_app_proxy_mode_exclude">设置黑名单</string>
+    <string name="per_app_proxy_mode_include">设置白名单</string>
+    <string name="content_description_app_icon">应用图标</string>
+    <string name="menu_hide_system">隐藏系统应用</string>
+    <string name="menu_show_system">显示系统应用</string>
+    <string name="menu_scan_china_apps">扫描大陆常见应用</string>
+    <string name="menu_import_from_clipboard">从剪贴板导入</string>
+    <string name="menu_export_to_clipboard">导出到剪贴板</string>
+    <string name="toast_clipboard_empty">剪贴板为空</string>
+    <string name="toast_app_list_empty">已安装应用列表为空</string>
+    <string name="toast_copied_to_clipboard">已导出到剪贴板</string>
+    <string name="toast_imported_from_clipboard">已从剪贴板导入</string>
+    <string name="message_import_from_clipboard">从剪贴板导入名单将覆盖现有名单，是否继续？</string>
+    <string name="message_scanning">扫描中，请稍等</string>
+    <string name="message_scan_app_error">扫描失败</string>
+    <string name="message_scan_app_no_apps_found">未扫描到符合的应用</string>
+    <string name="message_scan_app_found">扫描到以下应用，请选择下一步操作</string>
+    <string name="title_scan_result">扫描结果</string>
+    <string name="action_select">选中这些应用</string>
+    <string name="action_deselect">返选这些应用</string>
+    <string name="per_app_proxy_update_on_change">安装大陆常见应用后自动更新名单</string>
+    <string name="import_profile">导入配置</string>
+    <string name="import_profile_message">你确定要导入配置文件 %s ？</string>
+    <string name="icloud_profile_unsupported">Android 平台不支持导入来自 iCloud 的配置</string>
+    <string name="search">搜索</string>
+    <string name="urltest">自动选择</string>
+    <string name="expand">展开</string>
+    <string name="http_proxy">设置 HTTP 代理</string>
+    <string name="title_scan_vpn">扫描 VPN 应用</string>
+    <string name="action_open">查看</string>
+    <string name="message_scan_vpn">扫描已安装 VPN 应用并检测它们</string>
+    <string name="action_scan_vpn">开始扫描</string>
+    <string name="message_debug_tools">一些调试功能</string>
+    <string name="vpn_app_type">应用类型</string>
+    <string name="vpn_core_type">核心类型</string>
+    <string name="vpn_core_path">核心路径</string>
+    <string name="vpn_golang_version">Go 版本</string>
+    <string name="vpn_app_type_other">其他类型</string>
+    <string name="vpn_core_type_unknown">未知核心</string>
+    <string name="no_updates_available">没有可用更新</string>
+    <string name="sponsor">打赏</string>
+    <string name="sponsor_play">通过 Play 应用商店进行打赏</string>
+    <string name="sponsor_message">如果我有帮助到您，请考虑打赏我</string>
+    <string name="other_methods">其他方案</string>
+    <string name="action_start">启动</string>
+    <string name="location_permission_title">定位权限申请</string>
+    <string name="location_permission_description">根据谷歌要求，获取 WiFi 信息需要申请定位权限\n\n如果您不需要在路由过程中匹配 SSID 和 BSSID，请拒绝权限申请</string>
+
 </resources>
