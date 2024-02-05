@@ -14,6 +14,7 @@ class HTTPClient : Closeable {
             userAgent += BuildConfig.VERSION_CODE
             userAgent += "; sing-box "
             userAgent += Libbox.version()
+            userAgent += "; PuerNya fork"
             userAgent += ")"
             userAgent
         }
