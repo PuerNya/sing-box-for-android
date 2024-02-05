@@ -186,7 +186,7 @@ class NewProfileActivity : AbstractActivity() {
                 configFile.writeText(content)
                 typedProfile.remoteURL = remoteURL
                 typedProfile.lastUpdated = Date()
-                typedProfile.autoUpdate = EnabledType.valueOf(binding.autoUpdate.text).boolValue
+                typedProfile.autoUpdate = EnabledType.getType(binding.autoUpdate.text).boolValue
                 binding.autoUpdateInterval.text.toIntOrNull()?.also {
                     typedProfile.autoUpdateInterval = it
                 }

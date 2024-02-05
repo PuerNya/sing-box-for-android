@@ -103,7 +103,7 @@ class EditProfileActivity : AbstractActivity() {
                     binding.remoteURL.text = profile.typed.remoteURL
                     binding.lastUpdated.text =
                         DateFormat.getDateTimeInstance().format(profile.typed.lastUpdated)
-                    binding.autoUpdate.text = EnabledType.from(profile.typed.autoUpdate).name
+                    binding.autoUpdate.text = EnabledType.from(profile.typed.autoUpdate).keyName
                     binding.autoUpdate.setSimpleItems(R.array.enabled)
                     binding.autoUpdateInterval.isVisible = profile.typed.autoUpdate
                     binding.autoUpdateInterval.text = profile.typed.autoUpdateInterval.toString()
@@ -126,7 +126,7 @@ class EditProfileActivity : AbstractActivity() {
 
     private fun updateAutoUpdate(newValue: String) {
         val binding = binding ?: return
-        val boolValue = EnabledType.valueOf(newValue).boolValue
+        val boolValue = EnabledType.getType(newValue).boolValue
         if (profile.typed.autoUpdate == boolValue) {
             return
         }
