@@ -140,11 +140,6 @@
     <string name="vpn_app_type_other">其他类型</string>
     <string name="vpn_core_type_unknown">未知核心</string>
     <string name="no_updates_available">没有可用更新</string>
-    <string name="sponsor">打赏</string>
-    <string name="sponsor_play">通过 Play 应用商店进行打赏</string>
-    <string name="sponsor_message">如果我有帮助到您，请考虑打赏我</string>
-    <string name="other_methods">其他方案</string>
-    <string name="action_start">启动</string>
     <string name="location_permission_title">定位权限申请</string>
     <string name="location_permission_description">根据谷歌要求，获取 WiFi 信息需要申请定位权限\n\n如果您不需要在路由过程中匹配 SSID 和 BSSID，请拒绝权限申请</string>
 
